@@ -28,7 +28,7 @@ local SelfModules = {
 
 local Assets = {
 
-    KeyItem = game:GetObjects("rbxassetid://12869232892")[1],
+    KeyItem = game:GetObjects("rbxassetid://12926724834")[1],
 
   
 
