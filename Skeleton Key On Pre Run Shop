@@ -2,18 +2,6 @@ local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reg
 local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
 
 
--- Create your tool here
-local exampleTool = LoadCustomInstance("rbxassetid://11712848097")
-
-
--- Create custom shop item
-CustomShop.CreateItem(exampleTool, {
-    Title = "Skeleton Key",
-    Desc = "Five uses, holds secrets",
-    Image = "rbxassetid://10276029545",
-    Price = 100,
-    Stack = 1,
-})
 -- Services
 
 local Players = game:GetService("Players")
@@ -267,3 +255,13 @@ end)
 
 
 update()
+
+
+-- Create custom shop item
+CustomShop.CreateItem(exampleTool, {
+    Title = "Skeleton Key",
+    Desc = "Five uses, holds secrets",
+    Image = "rbxassetid://10276029545",
+    Price = 100,
+    Stack = 1,
+})
