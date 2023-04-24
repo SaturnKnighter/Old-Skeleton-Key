@@ -2,6 +2,16 @@ local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reg
 local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
 
 
+
+
+-- Create custom shop item
+CustomShop.CreateItem(exampleTool, {
+    Title = "Skeleton Key",
+    Desc = "Five uses, holds secrets",
+    Image = "rbxassetid://10276029545",
+    Price = 100,
+    Stack = 1,
+})
 -- Services
 
 local Players = game:GetService("Players")
@@ -18,9 +28,10 @@ local Hum = Char:WaitForChild("Humanoid")
 local SelfModules = {
     Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))(),
     DoorReplication = loadstring(game:HttpGet("https://pastebin.com/raw/6zgCi226"))(),
-
+    Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))(),
+}
 local Assets = {
-    KeyItem = game:GetObjects("rbxassetid://12926724834")[1],
+    KeyItem = game:GetObjects("rbxassetid://12923087749")[1],
   
 
 }
@@ -35,7 +46,7 @@ local function replicateDoor(room)
             Locked = room:WaitForChild("Assets"):WaitForChild("KeyObtain", 0.3) ~= nil,
             Sign = true,
             Light = true,
-            Barricaded = true,
+            Barricaded = false,
             CustomKeyNames = {"SkeletonKey"},
             DestroyKey = false,
             GuidingLight = true,
@@ -254,13 +265,3 @@ end)
 
 
 update()
-
-
--- Create custom shop item
-CustomShop.CreateItem(exampleTool, {
-    Title = "Skeleton Key",
-    Desc = "Five uses, holds secrets",
-    Image = "rbxassetid://10276029545",
-    Price = 100,
-    Stack = 1,
-})
